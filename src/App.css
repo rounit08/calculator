@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.body {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bolder;
 }
 
-.App-link {
-  color: #61dafb;
+#clear {
+  background-color: rgb(76, 224, 62);
+  grid-column: 1/3;
+}
+.container {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 256 px;
+  text-align: center;
+  border: 5px solid black;
+  background-color: black;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#c {
+  background-color: rgb(58, 195, 230);
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(80px, auto);
+}
+
+input[type="text"] {
+  height: 75px;
+  width: 249px;
+  border: 0px;
+  color: antiquewhite;
+  background-image: linear-gradient(
+    to right,
+    rgb(26, 25, 25),
+    rgb(104, 103, 103)
+  );
+  text-align: right;
+  font-size: 29px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+#enter {
+  color: antiquewhite;
+  grid-column: 3/5;
+  background-color: rgb(128, 19, 0);
+}
+
+button {
+  margin: 5px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: rgb(248, 243, 237);
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
 }
